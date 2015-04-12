@@ -111,7 +111,7 @@ static void _intsetSet(intset *is, int pos, int64_t value) {
 
 /*
  * 创建一个空的 intset
- *
+ * 使用INTSET_ENC_INT16作为初始值。
  * T = theta(1)
  */
 intset *intsetNew(void) {
@@ -244,7 +244,7 @@ static intset *intsetUpgradeAndAdd(intset *is, int64_t value) {
 }
 
 /*
- * 对从 from 开始，到 is 末尾的所有数据进行移动，以 to 为起点
+ * 对从 from 开始，到 is 末尾的所有数据进行移动，以 to 为终点
  *
  * 假设索引 2 为 from , 索引 1 为 to ，
  * 之前：

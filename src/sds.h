@@ -31,6 +31,7 @@
 #ifndef __SDS_H
 #define __SDS_H
 
+//最大预分配内存大小
 #define SDS_MAX_PREALLOC (1024*1024)
 
 #include <sys/types.h>
